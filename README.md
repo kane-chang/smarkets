@@ -31,7 +31,7 @@ Run the development server:
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. Alternatively, view it as a [deployed web app](https://smarkets-l22xmlzxs-kanes-projects-57c309e2.vercel.app/) on Vercel.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. Alternatively, view it as a [deployed web app](https://smarkets-lemon.vercel.app/) on Vercel.
 
 ## Tech Stack
 
