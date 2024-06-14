@@ -1,4 +1,4 @@
-import BoxingEvents from "@/ui/boxing/BoxingEvents";
+import BoxingEvents from "@/ui/boxingPageUI/BoxingEvents";
 import { EventsSkeleton } from "@/ui/skeletons";
 import { Suspense } from "react";
 

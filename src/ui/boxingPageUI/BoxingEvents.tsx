@@ -1,6 +1,6 @@
 import { fetchEvents } from "@/lib/data";
 import React from "react";
-import EventCard from "./EventCard";
+import EventCard from "../eventCardUI/EventCard";
 
 export default async function BoxingEvents() {
   const boxingEvents = await fetchEvents("boxing_match", "boxing");

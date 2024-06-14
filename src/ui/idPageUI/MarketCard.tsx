@@ -1,4 +1,3 @@
-import { IoMdCalendar } from "react-icons/io";
 import React from "react";
 import ContractDetails from "./ContractDetails";
 import { ContractsQuotesResponse, Market } from "@/lib/definitions";

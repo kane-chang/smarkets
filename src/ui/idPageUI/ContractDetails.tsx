@@ -1,5 +1,3 @@
-import { fetchContracts, fetchQuotes } from "@/lib/data";
-import { notFound } from "next/navigation";
 import React from "react";
 import OffersContainer from "./OffersContainer";
 import BidsContainer from "./BidsContainer";
@@ -40,5 +38,3 @@ export default async function ContractDetails({
     return <div className="">{contractRows}</div>;
   }
 }
-
-// {data[1][contracts[0].id]['bids'][0].price}

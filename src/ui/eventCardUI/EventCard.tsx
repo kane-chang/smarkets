@@ -18,7 +18,7 @@ export default async function EventCard({ event }: EventCardProps) {
 
 
   return (
-    <Link href={`/${event.type.domain}/${event.id}${event.full_slug}`}>
+    <Link href={`/${event.type.domain.replace('_', '-')}/${event.id}${event.full_slug}`}>
       <div className="event-card flex justify-between bg-grey-500 px-3 items-center">
         <div className="event-details py-2">
           <h2 className="font-semibold text-lg">{event.name}</h2>

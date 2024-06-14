@@ -1,7 +1,7 @@
 import { formatEventDate } from "@/lib/Formatter";
 import { fetchEvent } from "@/lib/data";
 import Breadcrumbs from "@/ui/Breadcrumbs";
-import BoxingIdPage from "@/ui/boxing/boxingIdPage/BoxingIdPage";
+import IdPage from "@/ui/idPageUI/IdPage";
 import { IdPageSkeleton } from "@/ui/skeletons";
 
 import { Suspense } from "react";
@@ -46,7 +46,7 @@ export default async function Page({
         </div>
       </div>
       <Suspense fallback={<IdPageSkeleton />}>
-        <BoxingIdPage id={id}/>
+        <IdPage id={id} />
       </Suspense>
     </main>
   );

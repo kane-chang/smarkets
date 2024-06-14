@@ -25,12 +25,12 @@ export default async function Page({
     <main className="p-5 flex flex-col w-full h-full">
       <Breadcrumbs
         breadcrumbs={[
-          { label: "Boxing", href: "/boxing" },
+          { label: "Ice Hockey", href: "/ice-hockey" },
           {
             label: eventData.events[0].name,
             href: params.slug
-              ? `/boxing/${id}/${params.slug.join("/")}`
-              : `/boxing/${id}`,
+              ? `/ice-hockey/${id}/${params.slug.join("/")}`
+              : `/ice-hockey/${id}`,
           },
         ]}
       />
