@@ -7,7 +7,7 @@ import { fetchEvent } from "@/lib/data";
 
 interface IdEventInfoProps {
   id: Event["id"];
-  slug: string[] | undefined ;
+  slug: string[] | undefined;
 }
 
 export default async function IdEventInfo({ id, slug }: IdEventInfoProps) {
@@ -17,8 +17,8 @@ export default async function IdEventInfo({ id, slug }: IdEventInfoProps) {
     return <p>No Data Found.</p>;
   }
 
-  const type_domain = eventData.events[0].type.domain
-  
+  const type_domain = eventData.events[0].type.domain;
+
   return (
     <>
       <Breadcrumbs
