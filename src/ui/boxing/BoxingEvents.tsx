@@ -15,7 +15,7 @@ export default async function BoxingEvents() {
   ));
 
   return (
-    <div className="p-5">
+    <div className="p-5 flex flex-col w-full">
       <h1 className="text-5xl font-bold my-5">Boxing</h1>
       <div className="flex flex-col gap-4">{events}</div>
     </div>

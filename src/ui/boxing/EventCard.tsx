@@ -9,6 +9,8 @@ interface EventCardProps {
 }
 
 export default function EventCard({ event }: EventCardProps ) {
+  
+
   return (
     <Link href={`/boxing/${event.id}${event.full_slug}`}>
       <div className="event-card flex justify-between bg-grey-500 px-3 items-center">

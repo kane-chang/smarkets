@@ -1,5 +1,5 @@
 import { unstable_noStore as noStore } from 'next/cache';
-import { ContractsQuotesResponse, EventResponse, EventTypeDomain, EventTypeEnum, Market, MarketsResponse } from './definitions';
+import { ContractsQuotesResponse, Event, EventResponse, EventTypeDomain, EventTypeEnum, Market, MarketsResponse } from './definitions';
 
 const SMARKETS_API_URL = 'https://api.smarkets.com/v3'
 
@@ -15,7 +15,18 @@ export async function fetchEvents(type: EventTypeEnum, type_domain: EventTypeDom
   }
 }
 
-export async function fetchMarkets(event_id: number): Promise<MarketsResponse> {
+export async function fetchEvent(event_id: Event['id']): Promise<EventResponse> {
+  try {
+    const response = await fetch(`${SMARKETS_API_URL}/events/${event_id}`)
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching boxing matches:', error);
+    throw error;
+  }
+}
+
+export async function fetchMarkets(event_id: Event['id']): Promise<MarketsResponse> {
     noStore()
 
     try {
@@ -62,7 +73,7 @@ export async function fetchContractsQuotes(market_ids: Market['id'][]): Promise<
 
       const data = await Promise.all([(await contractsPromise).json(), (await quotesPromise).json()])
 
-      console.log("contracts and quotes data: ", data);
+      // console.log("contracts and quotes data: ", data);
       
       return data;
   } catch (error) {

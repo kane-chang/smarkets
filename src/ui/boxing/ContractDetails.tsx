@@ -14,11 +14,6 @@ export default async function ContractDetails({
   market_id,
   data,
 }: ContractDetailsProps) {
-  //   const contractsData = await fetchContracts(market_id);
-  //   const quotesData = await fetchQuotes(market_id);
-  //   console.log(contractsData);
-  //   console.log(quotesData);
-  console.log(data);
 
   if (!data) {
     console.error("No data here!");
@@ -31,7 +26,7 @@ export default async function ContractDetails({
     );
     //   console.log(contracts);
     const contractRows = contracts.map((contract) => (
-      <div className="contractRow flex justify-between text-white items-center border-t border-grey-400 py-2">
+      <div className="contractRow flex justify-between text-white items-center border-t border-grey-400 py-2" key={contract.id}>
         <h2>{contract.name}</h2>
         <div className="prices-container flex gap-2">
           <OffersContainer offers={data[1][contract.id]["offers"]} />
