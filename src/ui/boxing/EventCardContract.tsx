@@ -24,8 +24,8 @@ export default function EventCardContract({ contract }: EventCardContractProps) 
 
 
   return (
-    <div className="contract flex flex-col items-center w-36 min-w-0">
-      <h3 className="text-sm w-full overflow-hidden whitespace-nowrap text-ellipsis text-center">
+    <div className="contract flex flex-col items-center w-36 min-w-0 max-w-36">
+      <h3 className="text-sm w-36 overflow-hidden whitespace-nowrap text-ellipsis text-center">
         {contract.name}
       </h3>
       <div className="flex prices gap-2">

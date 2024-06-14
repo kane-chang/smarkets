@@ -1,5 +1,4 @@
-import { fetchEvents, fetchMarkets } from "@/lib/data";
-import { formatEventDate } from "@/lib/Formatter";
+import { fetchEvents } from "@/lib/data";
 import React from "react";
 import EventCard from "./EventCard";
 

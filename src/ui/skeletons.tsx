@@ -44,19 +44,61 @@ export function CardSkeleton() {
   );
 }
 
-export function BoxingEventsSkeleton() {
+export function EventsSkeleton() {
   return (
-    <div className="flex flex-col gap-4">
-        <CardSkeleton />
-        <CardSkeleton />
-        <CardSkeleton />
-        <CardSkeleton />
-        <CardSkeleton />
-        <CardSkeleton />
-        <CardSkeleton />
-        <CardSkeleton />
-        <CardSkeleton />
-        <CardSkeleton />
+    <div className="flex flex-col gap-3">
+      <CardSkeleton />
+      <CardSkeleton />
+      <CardSkeleton />
+      <CardSkeleton />
+      <CardSkeleton />
+      <CardSkeleton />
+      <CardSkeleton />
+      <CardSkeleton />
+      <CardSkeleton />
+      <CardSkeleton />
+    </div>
+  );
+}
+
+export function ContractCardSkeleton() {
+  return (
+    <div
+      className={`${shimmer} relative overflow-hidden p-5 bg-grey-500 shadow-sm flex justify-between`}
+    >
+      <div className="flex p-1 items-center">
+        <div className="h-5 w-72 rounded-sm bg-grey-300" />
+      </div>
+      <div className="flex items-center justify-center">
+        <svg
+          fill="none"
+          height="24"
+          shapeRendering="geometricPrecision"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path d="M6 9l6 6 6-6"></path>
+        </svg>
+      </div>
+    </div>
+  );
+}
+
+export function IdPageSkeleton() {
+  return (
+    <div className="gap-3 flex flex-col">
+      <ContractCardSkeleton />
+      <ContractCardSkeleton />
+      <ContractCardSkeleton />
+      <ContractCardSkeleton />
+      <ContractCardSkeleton />
+      <ContractCardSkeleton />
+      <ContractCardSkeleton />
+      <ContractCardSkeleton />
     </div>
   );
 }

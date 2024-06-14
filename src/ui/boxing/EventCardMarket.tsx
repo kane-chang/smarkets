@@ -18,7 +18,7 @@ export default async function EventCardMarket({marketData}:EventCardMarketProps)
   
 
   return (
-    <div className="event-contracts w-[28rem] flex gap-4">
+    <div className="event-contracts w-[29rem] flex gap-3">
         {ContractsData.contracts.map((contract) => <EventCardContract key={contract.id} contract={contract}/>)}
     </div>
   )
