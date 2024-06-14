@@ -1,9 +1,11 @@
-import { redirect } from "next/navigation"
-
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  redirect('/boxing')
+  redirect("/boxing");
   return (
-    <h1>Homepage</h1>
-  )
+    <div className="p-5 flex flex-col w-full">
+      <h1 className="text-5xl font-bold my-5">Homepage</h1>
+      <p>Unfortunately, I haven't built this yet!</p>
+    </div>
+  );
 }

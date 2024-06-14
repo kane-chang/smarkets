@@ -3,11 +3,10 @@ import { Book } from "@/lib/definitions";
 import React from "react";
 
 interface OffersContainerProps {
-  offers: Book['offers']
+  offers: Book["offers"];
 }
 
 export default function OffersContainer({ offers }: OffersContainerProps) {
-
   return (
     <div className="offers flex gap-2">
       <div className="flex flex-col items-center">

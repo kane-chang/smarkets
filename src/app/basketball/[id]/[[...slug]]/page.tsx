@@ -3,7 +3,6 @@ import { fetchEvent } from "@/lib/data";
 import Breadcrumbs from "@/ui/Breadcrumbs";
 import IdPage from "@/ui/idPageUI/IdPage";
 import { IdPageSkeleton } from "@/ui/skeletons";
-
 import { Suspense } from "react";
 import { IoMdCalendar } from "react-icons/io";
 

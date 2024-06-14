@@ -3,11 +3,10 @@ import { Book } from "@/lib/definitions";
 import React from "react";
 
 interface BidsContainerProps {
-  bids: Book['bids']
+  bids: Book["bids"];
 }
 
 export default function BidsContainer({ bids }: BidsContainerProps) {
-
   return (
     <div className="bids flex gap-2">
       <div className="flex flex-col items-center">
@@ -15,9 +14,7 @@ export default function BidsContainer({ bids }: BidsContainerProps) {
           {bids[0] ? priceFormatter(bids[0].price) : null}
         </button>
         <p className="text-grey-300 font-bold text-xs p-1">
-          {bids[0]
-            ? quantityFormatter(bids[0].quantity, bids[0].price)
-            : null}
+          {bids[0] ? quantityFormatter(bids[0].quantity, bids[0].price) : null}
         </p>
       </div>
       <div className="flex flex-col items-center">
@@ -25,9 +22,7 @@ export default function BidsContainer({ bids }: BidsContainerProps) {
           {bids[1] ? priceFormatter(bids[1].price) : null}
         </button>
         <p className="text-grey-300 font-bold text-xs p-1">
-          {bids[1]
-            ? quantityFormatter(bids[1].quantity, bids[1].price)
-            : null}
+          {bids[1] ? quantityFormatter(bids[1].quantity, bids[1].price) : null}
         </p>
       </div>
       <div className="flex flex-col items-center">
@@ -35,9 +30,7 @@ export default function BidsContainer({ bids }: BidsContainerProps) {
           {bids[2] ? priceFormatter(bids[2].price) : null}
         </button>
         <p className="text-grey-300 font-bold text-xs p-1">
-          {bids[2]
-            ? quantityFormatter(bids[2].quantity, bids[2].price)
-            : null}
+          {bids[2] ? quantityFormatter(bids[2].quantity, bids[2].price) : null}
         </p>
       </div>
     </div>

@@ -1,8 +1,10 @@
+"use client";
+
 import { GiBoxingGlove } from "react-icons/gi";
 import { IoBasketballSharp } from "react-icons/io5";
 import { FaChevronRight, FaHockeyPuck } from "react-icons/fa";
 import Link from "next/link";
-
+import { usePathname } from "next/navigation";
 
 // Map of links to display in the side navigation.
 // Depending on the size of the application, this would be stored in a database.
@@ -21,6 +23,11 @@ const links = [
 ];
 
 export default function NavLinks() {
+  const pathname = usePathname();
+  console.log(pathname);
+
+  console.log(pathname === links[0].href);
+
   return (
     <>
       {links.map((link) => {
@@ -28,7 +35,9 @@ export default function NavLinks() {
           <Link
             key={link.name}
             href={link.href}
-            className="flex items-center hover:bg-[rgba(0,176,115,0.5)] transition px-5 py-2 justify-between focus:bg-grey-300"
+            className={`link flex items-center hover:bg-[rgba(0,176,115,0.5)] transition px-5 py-2 justify-between  ${
+              pathname === link.href ? "bg-grey-400" : ""
+            }`}
           >
             <div className="flex items-center gap-2">
               {link.icon}
