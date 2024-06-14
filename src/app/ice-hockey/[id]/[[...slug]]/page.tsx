@@ -8,15 +8,13 @@ export default async function Page({
 }: {
   params: { id: string; slug?: string[] };
 }) {
-  const id = params.id;
-
   return (
     <main className="p-5 flex flex-col w-full h-full">
       <Suspense fallback={<IdEventSkeleton />}>
-        <IdEventInfo id={id} slug={params.slug} />
+        <IdEventInfo id={params.id} slug={params.slug} />
       </Suspense>
       <Suspense fallback={<IdPageSkeleton />}>
-        <IdPage id={id} />
+        <IdPage id={params.id} />
       </Suspense>
     </main>
   );

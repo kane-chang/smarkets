@@ -13,7 +13,7 @@ export default async function ContractDetails({
   data,
 }: ContractDetailsProps) {
   if (!data || !data[0] || !data[1]) {
-    console.error("No data here!");
+    console.error("No contract or quotes data here!");
     return null;
   } else if (!data[0].contracts || data[1].error_type) {
     return <p className="mt-4 text-gray-400">No data available.</p>;

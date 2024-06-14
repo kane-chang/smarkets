@@ -6,7 +6,9 @@ export default async function IceHockeyEvents() {
   const iceHockeyEvents = await fetchEvents("ice_hockey_match", "ice_hockey");
 
   if (!iceHockeyEvents.events) {
-    return <p className="mt-4 text-gray-400">No data available.</p>;
+    return (
+      <p className="mt-4 text-gray-400">No ice hockey events available.</p>
+    );
   }
 
   const events = iceHockeyEvents.events.map((event) => (

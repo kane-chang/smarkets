@@ -14,7 +14,7 @@ export default async function EventCardMarket({
   if (!ContractsData) {
     return (
       <div className="event-contracts w-[28rem] flex gap-4">
-        <p>No data available</p>
+        <p>No contracts data available</p>
       </div>
     );
   }

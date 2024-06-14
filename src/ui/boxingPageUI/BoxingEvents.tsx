@@ -6,7 +6,7 @@ export default async function BoxingEvents() {
   const boxingEvents = await fetchEvents("boxing_match", "boxing");
 
   if (!boxingEvents.events) {
-    return <p className="mt-4 text-gray-400">No data available.</p>;
+    return <p className="mt-4 text-gray-400">No boxing events available.</p>;
   }
 
   const events = boxingEvents.events.map((event) => (

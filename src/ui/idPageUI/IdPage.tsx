@@ -11,7 +11,7 @@ export default async function IdPage({ id }: IdPageProps) {
   const marketsData = await fetchMarkets([id]);
 
   if (!marketsData.markets) {
-    return <p>No Data Found</p>;
+    return <p>No Market Data Found</p>;
   }
 
   const markets_ids = marketsData.markets.map((market) => market.id);

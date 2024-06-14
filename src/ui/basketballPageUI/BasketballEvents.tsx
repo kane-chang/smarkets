@@ -6,7 +6,9 @@ export default async function BasketballEvents() {
   const basketballEvents = await fetchEvents("basketball_match", "basketball");
 
   if (!basketballEvents.events) {
-    return <p className="mt-4 text-gray-400">No data available.</p>;
+    return (
+      <p className="mt-4 text-gray-400">No basketball events available.</p>
+    );
   }
 
   const events = basketballEvents.events.map((event) => (

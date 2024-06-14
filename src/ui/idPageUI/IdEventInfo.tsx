@@ -14,7 +14,7 @@ export default async function IdEventInfo({ id, slug }: IdEventInfoProps) {
   const eventData = await fetchEvent(id);
 
   if (!eventData.events) {
-    return <p>No Data Found.</p>;
+    return <p>No Event Data Found.</p>;
   }
 
   const type_domain = eventData.events[0].type.domain;
