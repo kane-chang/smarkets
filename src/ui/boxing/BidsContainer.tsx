@@ -1,7 +1,12 @@
 import { priceFormatter, quantityFormatter } from "@/lib/Formatter";
+import { Book } from "@/lib/definitions";
 import React from "react";
 
-export default function BidsContainer({ bids }) {
+interface BidsContainerProps {
+  bids: Book['bids']
+}
+
+export default function BidsContainer({ bids }: BidsContainerProps) {
 
   return (
     <div className="bids flex gap-2">

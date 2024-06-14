@@ -1,8 +1,14 @@
 import { IoMdCalendar } from "react-icons/io";
 import React from "react";
 import ContractDetails from "./ContractDetails";
+import { ContractsQuotesResponse, Market } from "@/lib/definitions";
 
-export default function MarketCard({ market, data }) {
+interface MarketCardProps {
+  market: Market,
+  data: ContractsQuotesResponse
+}
+
+export default function MarketCard({ market, data }: MarketCardProps) {
   return (
     <div className="p-5 bg-grey-500">
       <details className="group">

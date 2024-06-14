@@ -2,8 +2,13 @@ import { formatEventDate } from "@/lib/Formatter";
 import { IoMdCalendar } from "react-icons/io";
 import React from "react";
 import Link from "next/link";
+import { Event } from '@/lib/definitions';
 
-export default function EventCard({ event }) {
+interface EventCardProps {
+  event: Event
+}
+
+export default function EventCard({ event }: EventCardProps ) {
   return (
     <Link href={`/boxing/${event.id}${event.full_slug}`}>
       <div className="event-card flex justify-between bg-grey-500 px-3 items-center">
@@ -11,7 +16,7 @@ export default function EventCard({ event }) {
           <h2 className="font-semibold text-lg">{event.name}</h2>
           <div className="flex items-center gap-1 font-semibold text-grey-300 text-xs">
             <IoMdCalendar />
-            <p>{formatEventDate(event.start_datetime)}</p>
+            <p>{event.start_datetime ? formatEventDate(event.start_datetime) : null}</p>
           </div>
         </div>
         <div className="event-contracts flex gap-4">
