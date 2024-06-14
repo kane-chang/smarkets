@@ -1,9 +1,9 @@
-import BoxingEvents from "@/ui/BoxingEvents";
+import BoxingEvents from "@/ui/boxing/BoxingEvents";
 
 export default function Page() {
-    return (
+  return (
     <>
-        <BoxingEvents/>
+      <BoxingEvents />
     </>
-    );
-  }
+  );
+}

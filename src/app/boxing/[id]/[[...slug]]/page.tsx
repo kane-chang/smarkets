@@ -1,5 +1,5 @@
 import { fetchContractsQuotes, fetchMarkets } from "@/lib/data";
-import MarketCard from "@/ui/MarketCard";
+import MarketCard from "@/ui/boxing/MarketCard";
 import { notFound } from "next/navigation";
 
 export default async function Page({ params }: { params: { id: string } }) {

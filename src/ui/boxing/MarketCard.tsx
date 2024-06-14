@@ -1,6 +1,5 @@
 import { IoMdCalendar } from "react-icons/io";
 import React from "react";
-import Link from "next/link";
 import ContractDetails from "./ContractDetails";
 
 export default function MarketCard({ market, data }) {
