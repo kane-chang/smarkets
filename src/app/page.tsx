@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="p-5 flex flex-col w-full">
       <h1 className="text-5xl font-bold my-5">Homepage</h1>
-      <p>Unfortunately, I haven't built this yet!</p>
+      <p>Unfortunately, this is not built yet!</p>
     </div>
   );
 }
