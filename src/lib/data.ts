@@ -33,7 +33,7 @@ export async function fetchEvent(
   event_id: Event["id"]
 ): Promise<EventResponse> {
   try {
-    const response = await fetch(`${SMARKETS_API_URL}/events/${event_id}`);
+    const response = await fetch(`${SMARKETS_API_URL}/events/${event_id}/?&with_new_type=true`);
     const data = await response.json();
     return data;
   } catch (error) {

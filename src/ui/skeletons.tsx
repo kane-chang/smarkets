@@ -102,3 +102,16 @@ export function IdPageSkeleton() {
     </div>
   );
 }
+
+export function IdEventSkeleton() {
+  return (
+    <div
+      className={`${shimmer} relative overflow-hidden shadow-sm flex flex-col`}
+    >
+      <div className="w-52 h-4 bg-grey-300 rounded-sm" />
+
+      <div className="w-96 h-9 bg-grey-300 mt-14 rounded-sm" />
+      <div className="w-24 h-3 bg-grey-400 my-5 rounded-sm"/>
+    </div>
+  );
+}
