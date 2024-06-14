@@ -1,12 +1,12 @@
 import { unstable_noStore as noStore } from 'next/cache';
-import { ContractsQuotesResponse, Event, EventResponse, EventTypeDomain, EventTypeEnum, Market, MarketsResponse } from './definitions';
+import { ContractsQuotesResponse, ContractsResponse, Event, EventResponse, EventTypeDomain, EventTypeEnum, Market, MarketsResponse } from './definitions';
 
 const SMARKETS_API_URL = 'https://api.smarkets.com/v3'
 
 export async function fetchEvents(type: EventTypeEnum, type_domain: EventTypeDomain): Promise<EventResponse> {
   noStore()
   try {
-    const response = await fetch(`${SMARKETS_API_URL}/events/?state=new&state=upcoming&state=live&type=${type}&type_domain=${type_domain}&with_new_type=true&sort=display_order%2Cstart_datetime%2Cid&limit=100&include_hidden=false`)
+    const response = await fetch(`${SMARKETS_API_URL}/events/?state=new&state=upcoming&state=live&type=${type}&type_domain=${type_domain}&with_new_type=true&sort=display_order%2Cstart_datetime%2Cid&limit=50&include_hidden=false`)
     const data = await response.json();
     return data;
   } catch (error) {
@@ -26,11 +26,11 @@ export async function fetchEvent(event_id: Event['id']): Promise<EventResponse> 
   }
 }
 
-export async function fetchMarkets(event_id: Event['id']): Promise<MarketsResponse> {
+export async function fetchMarkets(event_ids: Event['id'][]): Promise<MarketsResponse> {
     noStore()
-
+        
     try {
-      const response = await fetch(`${SMARKETS_API_URL}/events/${event_id}/markets/?sort=event_id%2Cdisplay_order&popular=false&include_hidden=false`)
+      const response = await fetch(`${SMARKETS_API_URL}/events/${event_ids}/markets/?sort=event_id%2Cdisplay_order&popular=false&include_hidden=false`)
       const data = await response.json();
       return data;
     } catch (error) {
@@ -52,7 +52,7 @@ export async function fetchQuotes(market_id: Market['id']) {
     };
 };
 
-export async function fetchContracts(market_id: Market['id']) {
+export async function fetchContracts(market_id: Market['id'][]): Promise<ContractsResponse> {
     // const markets_url = market_ids.join();
     try {
         const response = await fetch(`${SMARKETS_API_URL}/markets/${market_id}/contracts/?include_hidden=false`)

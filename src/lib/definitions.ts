@@ -253,9 +253,11 @@ export interface Pagination {
   next_page: string | null;
 }
 
-export interface ContractsResponse {
-  contracts: Contract[];
-}
+export type ContractsResponse =
+  | {
+      contracts: Contract[];
+    }
+  | undefined;
 
 export interface Contract {
   competitor_id: number | null;
@@ -311,4 +313,6 @@ export interface Tick {
   quantity: number;
 }
 
-export type ContractsQuotesResponse = [ContractsResponse, QuotesResponse] | undefined ;
+export type ContractsQuotesResponse =
+  | [ContractsResponse, QuotesResponse]
+  | undefined;

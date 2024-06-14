@@ -22,9 +22,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${sourceSans3.className} antialiased`}>
         <Header />
-        <div className="flex w-full h-full">
+        <div className="flex w-full h-full pt-12">
           <SideNav />
-          {children}
+          <div className="ml-56 w-full h-full flex">{children}</div>
         </div>
       </body>
     </html>

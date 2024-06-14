@@ -4,8 +4,8 @@ import ContractDetails from "./ContractDetails";
 import { ContractsQuotesResponse, Market } from "@/lib/definitions";
 
 interface MarketCardProps {
-  market: Market,
-  data: ContractsQuotesResponse
+  market: Market;
+  data: ContractsQuotesResponse;
 }
 
 export default function MarketCard({ market, data }: MarketCardProps) {

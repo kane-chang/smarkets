@@ -1,4 +1,4 @@
-import { fetchEvents } from "@/lib/data";
+import { fetchEvents, fetchMarkets } from "@/lib/data";
 import { formatEventDate } from "@/lib/Formatter";
 import React from "react";
 import EventCard from "./EventCard";
@@ -14,10 +14,5 @@ export default async function BoxingEvents() {
     <EventCard key={event.id} event={event} />
   ));
 
-  return (
-    <div className="p-5 flex flex-col w-full">
-      <h1 className="text-5xl font-bold my-5">Boxing</h1>
-      <div className="flex flex-col gap-4">{events}</div>
-    </div>
-  );
+  return <div className="flex flex-col gap-4">{events}</div>;
 }
