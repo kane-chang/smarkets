@@ -4,8 +4,7 @@ import React from "react";
 import EventCard from "./EventCard";
 
 export default async function BoxingEvents() {
-  const boxingEvents = await fetchEvents('boxing_match', 'boxing', 'single_match');
-//   console.log(boxingEvents.events[2]);
+  const boxingEvents = await fetchEvents("boxing_match", "boxing");
 
   if (!boxingEvents.events) {
     return <p className="mt-4 text-gray-400">No data available.</p>;
@@ -17,8 +16,8 @@ export default async function BoxingEvents() {
 
   return (
     <div className="p-5">
-        <h1 className="text-5xl font-bold my-5">Boxing</h1>
-        <div className="flex flex-col gap-4">{events}</div>
+      <h1 className="text-5xl font-bold my-5">Boxing</h1>
+      <div className="flex flex-col gap-4">{events}</div>
     </div>
   );
 }

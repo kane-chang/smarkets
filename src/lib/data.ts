@@ -52,18 +52,48 @@ export async function fetchMarkets(event_id: number) {
     }
 }
 
-export async function fetchContracts(markets: number[]) {
-    const markets_url = markets.join();
+export async function fetchQuotes(market_id) {
+
     try {
-        const response = await fetch(`${SMARKETS_API_URL}/markets/${markets_url}/contracts/?include_hidden=false`)
+        const response = await fetch(`${SMARKETS_API_URL}/markets/${market_id}/quotes`)
         const data = await response.json();
-        console.log("contracts data: ", data);
+        // console.log("quotes data: ", data);
+        
+        return data;
+    } catch (error) {
+        console.error('Error fetching quotes:', error)
+    };
+};
+
+export async function fetchContracts(market_id) {
+    // const markets_url = market_ids.join();
+    try {
+        const response = await fetch(`${SMARKETS_API_URL}/markets/${market_id}/contracts/?include_hidden=false`)
+        const data = await response.json();
+        // console.log("contracts data: ", data);
         
         return data;
     } catch (error) {
         console.error('Error fetching contracts:', error)
     };
 };
+
+export async function fetchContractsQuotes(market_ids) {
+
+  try {
+      const contractsPromise = fetch(`${SMARKETS_API_URL}/markets/${market_ids}/contracts/?include_hidden=false`)
+      const quotesPromise = fetch(`${SMARKETS_API_URL}/markets/${market_ids}/quotes`)
+
+      const data = await Promise.all([(await contractsPromise).json(), (await quotesPromise).json()])
+
+      // console.log("contracts and quotes data: ", data);
+      
+      return data;
+  } catch (error) {
+      console.error('Error fetching contracts:', error)
+  };
+};
+
 
 export async function fetchCardData() {
   noStore()

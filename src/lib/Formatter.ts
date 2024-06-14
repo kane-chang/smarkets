@@ -18,9 +18,9 @@ export const formatEventDate = (eventDate: string): string => {
 };
 
 export const priceFormatter = (price: number) => {
-  return (10000 / price)
+  return (10000 / price).toFixed(2).replace(/\.?0+$/, '')
 }
 
 export const quantityFormatter = (qty: number, price: number) => {
-  return (qty * price / 100000000)
+  return `£${(qty * price / 100000000).toFixed()}`
 }
