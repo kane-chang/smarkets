@@ -17,7 +17,9 @@ I will explain my technical choices, challenges, and areas for improvement below
 
 ## Installation & Usage
 
-To install necessary dependencies, run the following command:
+![Smarkets clone boxing event page preview screenshot](https://github.com/kane-chang/smarkets/blob/main/public/preview.png)
+
+To install the necessary dependencies, run the following command:
 
 ```bash
 
