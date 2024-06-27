@@ -1,19 +1,19 @@
-# Smarkets Frontend Engineer Assessment
+# Smarkets - Betting Exchange Clone
 
-Hello Smarkets Hiring Team!
-
-Thank you for the opportunity to showcase my expertise as a frontend engineer, I enjoyed completing the assessment and working with Smarkets's API. Overall, I used React to create a Smarkets Exchange Display Web App and utilised 4 API endpoints (Events, Markets, Contracts and Prices).
-
-I will explain my technical choices, challenges, and areas for improvement below.
+I created a simplified Smarkets Betting Exchange clone using Next.js, React and Typescript and utilised 4 API endpoints (Events, Markets, Contracts and Prices). For this mini-project, the technical choices I made were aligned with these primary goals:
+- While simple, the web app should leverage Smarket API endpoints to retrieve real-time exchange information from events to bids
+- Replicate the unique feel and brand of Smarkets by adhering closely to fonts, colours and UI design
+- Modular and flexible starting code structure that can scale quickly with more event types and categories
+  
+I will explain my thought process, challenges, and areas for improvement below.
 
 ## Table of Contents
 
 1. [Installation & Usage](#installation--usage)
 2. [Tech Stack](#tech-stack)
-3. [Technical Choices](#technical-choices)
-4. [Challenges](#challenges)
-5. [Improvements](#improvements)
-6. [Questions](#questions)
+3. [Challenges](#challenges)
+4. [Improvements](#improvements)
+5. [Questions](#questions)
 
 ## Installation & Usage
 
@@ -43,14 +43,6 @@ The Tech Stack along with a brief explanation:
 - **Next.js (React)**: To leverage server-side rendering and static site generation to enhance performance and SEO, such as faster First Contentful Paint (FCP). This is especially ideal as Smarkets API is content heavy with large volumes of data
 - **Tailwind CSS**: Selected for quick and consistent styling with its utility-first approach, which is perfect for the task to rapidly develop a small sized web app
 - **date-fns**: A date formatter that is chosen because it is lightweight and offers efficient and consistent date manipulation and formatting
-
-## Technical Choices
-
-Approaching the task, the technical choices I made were aligned with these primary goals:
-
-- Replicate the unique feel and brand of Smarkets by adhering closely to fonts, colors and UI design
-- While simple, the web app should be usable to directly view exchange information from Smarkets API endpoints from events to bids
-- Modular and flexible code structure that can scale quickly with more event types
 
 ## Challenges
 
