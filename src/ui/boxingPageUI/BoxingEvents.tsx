@@ -3,7 +3,7 @@ import React from "react";
 import EventCard from "../eventCardUI/EventCard";
 
 export default async function BoxingEvents() {
-  const boxingEvents = await fetchEvents("boxing_match");
+  const boxingEvents = await fetchEvents(["boxing_match"]);
 
   if (!boxingEvents.events) {
     return <p className="mt-4 text-gray-400">No boxing events available.</p>;

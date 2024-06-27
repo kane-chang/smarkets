@@ -5,6 +5,7 @@ import { IoBasketballSharp } from "react-icons/io5";
 import { FaChevronRight, FaHockeyPuck } from "react-icons/fa";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { categories } from "@/lib/categories";
 
 // Map of links to display in the side navigation.
 // Depending on the size of the application, this would be stored in a database.
@@ -27,7 +28,7 @@ export default function NavLinks() {
     
   return (
     <>
-      {links.map((link) => {
+      {categories.map((link) => {
         return (
           <Link
             key={link.name}

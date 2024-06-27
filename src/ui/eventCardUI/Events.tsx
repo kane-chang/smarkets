@@ -2,16 +2,15 @@ import { fetchEvents } from "@/lib/data";
 import React from "react";
 import EventCard from "../eventCardUI/EventCard";
 import {EventTypeEnum } from "@/lib/definitions";
+import { getTypesByName } from "@/lib/categories";
 
-interface EventsProps {
-    type: EventTypeEnum,
-}
 
-export default async function Events({type}: EventsProps) {
-  const eventsData = await fetchEvents(type);
+export default async function Events({category}) {
+  const types = getTypesByName(category)
+  const eventsData = await fetchEvents(types);
 
   if (!eventsData.events) {
-    return <p className="mt-4 text-gray-400">No {type} available.</p>;
+    return <p className="mt-4 text-gray-400">No {category} data available.</p>;
   }
 
   const events = eventsData.events.map((event) => (

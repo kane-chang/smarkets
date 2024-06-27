@@ -3,7 +3,7 @@ import React from "react";
 import EventCard from "../eventCardUI/EventCard";
 
 export default async function IceHockeyEvents() {
-  const iceHockeyEvents = await fetchEvents("ice_hockey_match");
+  const iceHockeyEvents = await fetchEvents(["ice_hockey_match"]);
 
   if (!iceHockeyEvents.events) {
     return (
