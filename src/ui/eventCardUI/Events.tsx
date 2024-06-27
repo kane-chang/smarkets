@@ -1,15 +1,14 @@
 import { fetchEvents } from "@/lib/data";
 import React from "react";
 import EventCard from "../eventCardUI/EventCard";
-import {EventTypeDomain, EventTypeEnum } from "@/lib/definitions";
+import {EventTypeEnum } from "@/lib/definitions";
 
 interface EventsProps {
     type: EventTypeEnum,
-    type_domain: EventTypeDomain,
 }
 
-export default async function Events({type, type_domain}: EventsProps) {
-  const eventsData = await fetchEvents(type, type_domain);
+export default async function Events({type}: EventsProps) {
+  const eventsData = await fetchEvents(type);
 
   if (!eventsData.events) {
     return <p className="mt-4 text-gray-400">No {type} available.</p>;
