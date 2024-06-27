@@ -1,6 +1,6 @@
 # Smarkets - Betting Exchange Clone
 
-I created a simplified Smarkets Betting Exchange clone using Next.js, React and Typescript and utilised 4 API endpoints (Events, Markets, Contracts and Prices). For this mini-project, the technical choices I made were aligned with these primary goals:
+I created a simplified Smarkets Betting Exchange clone using Next.js, React and Typescript and utilised 4 API endpoints (Events, Markets, Contracts and Prices) from [Smarkets API](https://docs.smarkets.com/). For this mini-project, the technical choices I made were aligned with these primary goals:
 - While simple, the web app should leverage Smarket API endpoints to retrieve real-time exchange information from events to bids
 - Replicate the unique feel and brand of Smarkets by adhering closely to fonts, colours and UI design
 - Modular and flexible starting code structure that can scale quickly with more event types and categories
