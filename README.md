@@ -66,7 +66,7 @@ I believe that there is still significant room for improvement, as the web app w
 
 - Implement client-side components for more user interaction with bids and offers buttons
 - Build a homepage featuring most popular markets to capture users' attention
-- Provide more categorisation of each event in the Side Bar Navigation, as it currently does not have categories for simplicity
+- Provide more categorisation of each event in the Side Bar Navigation, as it currently does not have sub-categories for simplicity
 - Mobile-responsiveness: I decided to focus on providing a great desktop experience for the web app, but given more time, I would like to add mobile responsiveness or develop a React Native app.
 
 ## Questions
