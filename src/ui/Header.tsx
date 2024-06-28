@@ -12,6 +12,7 @@ export default function Header() {
           alt="Smarkets logo"
           width={112}
           height={26}
+          priority={true}
         />
       </Link>
     </div>

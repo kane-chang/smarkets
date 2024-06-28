@@ -4,7 +4,6 @@ import {
   ContractsResponse,
   Event,
   EventResponse,
-  EventTypeDomain,
   EventTypeEnum,
   Market,
   MarketsResponse,

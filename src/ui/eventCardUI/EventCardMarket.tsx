@@ -22,11 +22,16 @@ export default async function EventCardMarket({
   return (
     <div className="event-contracts w-[29rem] flex gap-3">
       {ContractsData.contracts.length > 3
-        ? [ContractsData.contracts
-            .slice(0, 2)
-            .map((contract) => (
-              <EventCardContract key={contract.id} contract={contract} />
-            )), <div className="contract flex flex-col items-center justify-center w-36 min-w-0 max-w-36 text-sm">+{ContractsData.contracts.length-2} contracts</div>]
+        ? [
+            ContractsData.contracts
+              .slice(0, 2)
+              .map((contract) => (
+                <EventCardContract key={contract.id} contract={contract} />
+              )),
+            <div className="contract flex flex-col items-center justify-center w-36 min-w-0 max-w-36 text-sm">
+              +{ContractsData.contracts.length - 2} contracts
+            </div>,
+          ]
         : ContractsData.contracts.map((contract) => (
             <EventCardContract key={contract.id} contract={contract} />
           ))}

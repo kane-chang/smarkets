@@ -1,31 +1,15 @@
 "use client";
-
-import { GiBoxingGlove } from "react-icons/gi";
-import { IoBasketballSharp } from "react-icons/io5";
-import { FaChevronRight, FaHockeyPuck } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { links } from "@/lib/categories";
 
 // Map of links to display in the side navigation.
 // Depending on the size of the application, this would be stored in a database.
-// const links = [
-//   { name: "Boxing", href: "/boxing", icon: <GiBoxingGlove size={20} /> },
-//   {
-//     name: "Basketball",
-//     href: "/basketball",
-//     icon: <IoBasketballSharp size={20} />,
-//   },
-//   {
-//     name: "Ice Hockey",
-//     href: "/ice-hockey",
-//     icon: <FaHockeyPuck size={20} />,
-//   },
-// ];
 
 export default function NavLinks() {
   const pathname = usePathname();
-    
+
   return (
     <>
       {links.map((link) => {
