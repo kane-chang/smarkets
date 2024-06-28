@@ -4,7 +4,6 @@ import {
   ContractsResponse,
   Event,
   EventResponse,
-  EventTypeDomain,
   EventTypeEnum,
   Market,
   MarketsResponse,
@@ -13,13 +12,12 @@ import {
 const SMARKETS_API_URL = "https://api.smarkets.com/v3";
 
 export async function fetchEvents(
-  type: EventTypeEnum,
-  type_domain: EventTypeDomain
+  types: EventTypeEnum[]
 ): Promise<EventResponse> {
   noStore(); // As market information may regularly update, I decided to prevent caching of potentially outdated data
   try {
     const response = await fetch(
-      `${SMARKETS_API_URL}/events/?state=new&state=upcoming&state=live&type=${type}&type_domain=${type_domain}&with_new_type=true&sort=display_order%2Cstart_datetime%2Cid&limit=50&include_hidden=false`
+      `${SMARKETS_API_URL}/events/?state=new&state=upcoming&state=live&type=${types.join('&type=')}&with_new_type=true&sort=display_order%2Cstart_datetime%2Cid&limit=50&include_hidden=false`
     );
     const data = await response.json();
     return data;

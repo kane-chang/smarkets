@@ -18,7 +18,7 @@ export default function Breadcrumbs({
             key={breadcrumb.href}
             className="text-white text-sm font-semibold hover:underline"
           >
-            <Link href={breadcrumb.href}>{breadcrumb.label.toUpperCase()}</Link>
+            <Link href={breadcrumb.href}>{breadcrumb.label.toUpperCase().replaceAll("_", " ")}</Link>
             {index < breadcrumbs.length - 1 ? (
               <span className="mx-3 inline-block">/</span>
             ) : null}

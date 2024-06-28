@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface EventResponse {
   events: Event[];
   pagination: Pagination;
@@ -316,3 +318,54 @@ export interface Tick {
 export type ContractsQuotesResponse =
   | [ContractsResponse, QuotesResponse]
   | undefined;
+
+export type CategoryKeys =
+  | "american-football"
+  | "baseball"
+  | "basketball"
+  | "boxing"
+  | "call-of-duty"
+  | "cricket"
+  | "csgo"
+  | "current-affairs"
+  | "cycling"
+  | "darts"
+  | "dota-2"
+  | "football-esports"
+  | "football"
+  | "golf"
+  | "greyhound-racing"
+  | "handball"
+  | "horse-racing"
+  | "ice-hockey"
+  | "league-of-legends"
+  | "mma"
+  | "motorsports"
+  | "politics"
+  | "rowing"
+  | "rugby-league"
+  | "rugby-union"
+  | "sailing"
+  | "snooker"
+  | "table-tennis"
+  | "tennis"
+  | "volleyball"
+  | "top-level-event"
+  | "tv-entertainment";
+
+export type Category = {
+  name: string;
+  types: EventTypeEnum[];
+};
+
+export type Categories = {
+  [key in CategoryKeys]: Category;
+};
+
+type Link = {
+  name: string;
+  href: string;
+  icon: ReactNode;
+};
+
+export type Links = Link[];
