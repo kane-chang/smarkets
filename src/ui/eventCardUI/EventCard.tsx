@@ -23,8 +23,8 @@ export default async function EventCard({ event }: EventCardProps) {
       }`}
     >
       <div className="event-card flex justify-between bg-grey-500 px-3 items-center">
-        <div className="event-details py-2">
-          <h2 className="font-semibold text-lg">{event.name}</h2>
+        <div className="event-details py-2 max-w-xs">
+          <h2 className="font-semibold text-lg ">{event.name}</h2>
           <div className="flex items-center gap-1 font-semibold text-grey-300 text-xs">
             <IoMdCalendar />
             <p>
