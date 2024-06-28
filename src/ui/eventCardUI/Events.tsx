@@ -2,11 +2,11 @@ import { fetchEvents } from "@/lib/data";
 import React from "react";
 import EventCard from "../eventCardUI/EventCard";
 import { categories } from "@/lib/categories";
-import { EventType, EventTypeEnum } from "@/lib/definitions";
+import { CategoryKeys, EventType, EventTypeEnum } from "@/lib/definitions";
 
 interface EventsProps {
     types: EventTypeEnum[],
-    name: string
+    name: string,
 }
 
 export default async function Events({types, name}: EventsProps) {

@@ -23,8 +23,9 @@ import { SiCounterstrike, SiRiotgames } from 'react-icons/si';
 import { MdSportsHandball } from 'react-icons/md';
 import { PiSoccerBallFill } from 'react-icons/pi';
 import { TbSoccerField } from 'react-icons/tb';
+import { Categories, Links } from './definitions';
 
-export const links = [
+export const links: Links = [
     { name: "American Football", href: "/american-football", icon: <GiAmericanFootballPlayer size={20}/> },
     { name: "Baseball", href: "/baseball", icon: <GiBaseballBat size={20}/> },
     { name: "Basketball", href: "/basketball", icon: <GiBasketballBall size={20}/> },
@@ -59,7 +60,7 @@ export const links = [
     { name: "TV Entertainment", href: "/tv-entertainment", icon: <FaTv size={20}/> }
 ];
 
-export const categories = {
+export const categories: Categories = {
     "american-football": { name: "American Football", types: ["american_football_match", "american_football_outright"] },
     "baseball": { name: "Baseball", types: ["baseball_match", "baseball_outright"] },
     "basketball": { name: "Basketball", types: ["basketball_esports_match", "basketball_match"] },
