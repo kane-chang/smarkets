@@ -12,6 +12,7 @@ interface EventCardProps {
 
 export default async function EventCard({ event }: EventCardProps) {
   const marketData = await fetchMarkets([event.id]);
+  
   if (!marketData.markets) {
     return <p>No market data available</p>;
   }

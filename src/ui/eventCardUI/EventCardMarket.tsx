@@ -10,11 +10,20 @@ interface EventCardMarketProps {
 export default async function EventCardMarket({
   marketData,
 }: EventCardMarketProps) {
+  
+  if (!marketData.markets[0]) {
+    return (
+      <div className="event-contracts w-[28rem] flex gap-4">
+        <p className="text-sm">No markets data available</p>
+      </div>
+    );
+  }
+
   const ContractsData = await fetchContracts([marketData.markets[0].id]);
   if (!ContractsData) {
     return (
       <div className="event-contracts w-[28rem] flex gap-4">
-        <p>No contracts data available</p>
+        <p className="text-sm">No contracts data available</p>
       </div>
     );
   }

@@ -20,7 +20,7 @@ import {
 } from 'react-icons/gi';
 import { FaBicycle, FaGamepad, FaHandHoldingUsd, FaHockeyPuck, FaMicrophoneAlt, FaTableTennis, FaTv } from 'react-icons/fa';
 import { SiCounterstrike, SiRiotgames } from 'react-icons/si';
-import { MdSportsHandball } from 'react-icons/md';
+import { MdSportsHandball, MdSportsRugby } from 'react-icons/md';
 import { PiSoccerBallFill } from 'react-icons/pi';
 import { TbSoccerField } from 'react-icons/tb';
 import { Categories, Links } from './definitions';
@@ -50,7 +50,7 @@ export const links: Links = [
     { name: "Politics", href: "/politics", icon: <FaHandHoldingUsd size={20}/> },
     { name: "Rowing", href: "/rowing", icon: <GiSailboat size={20}/> },
     { name: "Rugby League", href: "/rugby-league", icon: <GiRugbyConversion size={20}/> },
-    { name: "Rugby Union", href: "/rugby-union", icon: <GiRugbyConversion size={20}/> },
+    { name: "Rugby Union", href: "/rugby-union", icon: <MdSportsRugby size={20}/> },
     { name: "Sailing", href: "/sailing", icon: <GiSailboat size={20}/> },
     { name: "Snooker", href: "/snooker", icon: <GiEightBall size={20}/> },
     { name: "Table Tennis", href: "/table-tennis", icon: <FaTableTennis size={20}/> },

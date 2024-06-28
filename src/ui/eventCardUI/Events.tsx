@@ -10,9 +10,8 @@ interface EventsProps {
 
 export default async function Events({ types, name }: EventsProps) {
   const eventsData = await fetchEvents(types);
-
-  if (!eventsData.events) {
-    return <p className="mt-4 text-gray-400">No {name} data available.</p>;
+  if (!eventsData.events || eventsData.events.length < 1) {
+    return <p className="mt-4 text-gray-400">No {name} events available.</p>;
   }
 
   const events = eventsData.events.map((event) => (
