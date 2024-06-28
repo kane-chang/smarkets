@@ -18,7 +18,7 @@ export default function NavLinks() {
             key={link.name}
             href={link.href}
             className={`link flex items-center hover:bg-[rgba(0,176,115,0.5)] transition px-5 py-2 justify-between  ${
-              pathname === link.href ? "bg-grey-400" : ""
+              `/${pathname.split('/')[1]}` === link.href ? "bg-grey-400" : ""
             }`}
           >
             <div className="flex items-center gap-2">

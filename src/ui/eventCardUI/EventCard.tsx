@@ -19,7 +19,7 @@ export default async function EventCard({ event }: EventCardProps) {
 
   return (
     <Link
-      href={`/${event.type.domain.replace("_", "-")}/${event.id}${
+      href={`/${event.type.domain.replaceAll("_", "-")}/${event.id}${
         event.full_slug
       }`}
     >
