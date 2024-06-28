@@ -37,7 +37,7 @@ export default async function EventCardMarket({
               .map((contract) => (
                 <EventCardContract key={contract.id} contract={contract} />
               )),
-            <div className="contract flex flex-col items-center justify-center w-36 min-w-0 max-w-36 text-sm">
+            <div key="contract-overflow" className="contract flex flex-col items-center justify-center w-36 min-w-0 max-w-36 text-sm">
               +{ContractsData.contracts.length - 2} contracts
             </div>,
           ]
