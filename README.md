@@ -17,7 +17,7 @@ I will explain my thought process, challenges, and areas for improvement below.
 
 ## Installation & Usage
 
-![Smarkets clone boxing event page preview screenshot](https://github.com/kane-chang/smarkets/blob/main/public/preview.png)
+![Smarkets clone boxing event page preview screenshot](https://github.com/kane-chang/smarkets/blob/main/public/smarkets-preview.png)
 
 To install the necessary dependencies, run the following command:
 
